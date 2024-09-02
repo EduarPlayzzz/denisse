@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffe6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.container h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #ff4081;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.5em;
+    color: #ff79a6;
+    margin-bottom: 40px;
+}
+
+.container button {
+    background: linear-gradient(45deg, #ff4081, #ff79a6);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 64, 129, 0.4);
+    transition: transform 0.2s;
+}
+a {
+    color: #ff69b4; /* Color rosado para que combine con el tema */
+    text-decoration: none; /* Quitar subrayado */
+    font-weight: bold; /* Hacer el texto en negrita */
+    margin-bottom: 190px; /* Espacio debajo del enlace */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón por encima */
+}
+
+.container button:hover {
+    transform: scale(1.05);
+}
+
+.heart-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('images/heart.png') repeat;
+    background-size: 400px 400px; /* Ajusta el tamaño de los corazones según lo necesites */
+    animation: animateHearts 20s linear infinite;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.heart-animation {
+    z-index: 0; /* Se asegura de que la animación esté detrás de todo */
+    pointer-events: none; /* Permite hacer clic en elementos delante de la animación */
+}
+
+
+@keyframes animateHearts {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1000px 1000px;
+    }
+}
